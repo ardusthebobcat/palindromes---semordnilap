@@ -11,4 +11,7 @@ describe("palindromes", function () {
     palindrome("abcdefgfedcba").should.equal(true)
   });
 
+  it("checks a palindrome of any length with numbers only", function() {
+    palindrome("10010201001").should.equal(true)
+  });
 });
