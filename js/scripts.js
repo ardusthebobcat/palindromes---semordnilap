@@ -27,3 +27,19 @@ var palindrome = function(pd) {
 
   return output;
 };
+
+$(document).ready(function () {
+
+  $(".show-results").hide();
+
+  $("form#input-form").submit (function (event) {
+
+    var inputSentence = $("textarea#input-sentence").val();
+    var outputSentence = palindrome(inputSentence);
+    $("#output-paragraph").text(outputSentence);
+    $("#show-results").show();
+
+    event.preventDefault();
+
+  });
+});
