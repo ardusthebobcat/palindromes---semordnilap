@@ -6,4 +6,9 @@ describe("palindromes", function () {
   it("checks a clearly-not palindrome and returns false", function() {
     palindrome("car").should.equal(false)
   });
+
+  it("checks a palindrome of any length with letters", function(){
+    palindrome("abcdefgfedcba").should.equal(true)
+  });
+
 });
